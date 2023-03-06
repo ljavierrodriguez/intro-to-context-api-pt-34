@@ -4,7 +4,7 @@ import { GlobalContext } from '../store/AppContext';
 const Home = () => {
     //const [name, setName] = useState("John");
 
-    const { name, setName } = useContext(GlobalContext);
+    const { store, actions } = useContext(GlobalContext);
     return (
         <>
             {/* <GlobalContext.Consumer>
@@ -28,8 +28,8 @@ const Home = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <h1>Home</h1>
-                        <p>{name}</p>
-                        <button onClick={() => setName("Jane")}>Set Jane</button>
+                        <p>{store.name}</p>
+                        <button onClick={() => actions.getSaludo()}>Saludar</button>
                     </div>
                 </div>
             </div>

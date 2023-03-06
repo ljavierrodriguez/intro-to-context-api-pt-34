@@ -20,13 +20,11 @@ const injectContext = PassedComponent => {
 
         useEffect(() => {
             // aqui todas las funciones que quiera ejecutar al iniciar la pagina web
-            state.actions.getUsers(state.store.urlAPI+"/users");
-            //state.actions.getTasks(state.store.urlAPI+"/todos");
         }, [])
 
         return (
             <GlobalContext.Provider value={state}>
-                <PassedComponent {...props}/>
+                <PassedComponent {...props} />
             </GlobalContext.Provider>
         )
     }
